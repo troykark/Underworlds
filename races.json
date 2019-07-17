@@ -1,0 +1,27 @@
+{
+    "Human":{
+        "Name": "Human",
+        "AttributeBonuses": 
+            
+        {"str": 1,
+         "con": 1,
+         "dex": 1,
+         "int": 1,
+         "wis": 1,
+         "cha": 1
+        }
+    }
+    ,
+    "Dwarf":{
+    "Name": "Dwarf",
+    "AttributeBonuses": {
+        "str": 0,
+        "con": 2,
+        "dex": 0,
+        "int": 0,
+        "wis": 2,
+        "cha": 0
+        }
+			
+    }
+}
