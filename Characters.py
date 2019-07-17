@@ -34,6 +34,8 @@ class Person:
     def updateChar(self):
         for mod in self.charmods:
             mod.apply()
+    def applyBonus(self, attribute, add):
+        setattr(self, attribute, ++add)
 
 class characterClass:
     def __init__(self, name, character, level, startingclass=True, 
@@ -83,8 +85,15 @@ class charmod():
         self.permanent_bonus = permanent_bonus
         self.timer  = timer
     
+class bonus():
+    pass
+
 
 Mi = Person('Mio')
 
 print ( Mi.a_str,Mi.a_con,Mi.a_dex, Mi.a_int, Mi.a_wis, Mi.a_cha,"\n",
         Mi.race.name,Mi.classes,Mi.languages)
+print(Mi.xp)
+Mi.applyBonus( "xp", 100)
+
+print(Mi.xp)

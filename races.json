@@ -8,7 +8,8 @@
          "dex": 1,
          "int": 1,
          "wis": 1,
-         "cha": 1
+         "cha": 1,
+         "choice":0
         },
         "Languages" : ["Common", "Choice"]
     }
@@ -21,7 +22,8 @@
         "dex": 0,
         "int": 0,
         "wis": 2,
-        "cha": 0
+        "cha": 0,
+        "choice":0
         },
     "Languages" : ["Common", "Dwarvish"]			
     }
