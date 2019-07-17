@@ -2,7 +2,6 @@ import json
 
 with open('races.json') as racejson:
     RACES = json.load(racejson)
-    print(RACES["Human"])
 
 class Person:
     def __init__(self,name, hp=1, proficiency=0, speed=30,
@@ -31,8 +30,8 @@ class Person:
         if(len(classes)==0):
             self.classes.append(Monk('Monk', self, 1))
         if self.race == 'None':
-            self.race = Human('Dwarf',self,'None',RACES)
-    def updateChar():
+            self.race = Human('Human',self,'None',RACES)
+    def updateChar(self):
         for mod in self.charmods:
             mod.apply()
 
@@ -70,12 +69,13 @@ class Race():
         self.character.a_int += self.bonusarray["int"]
         self.character.a_str += self.bonusarray["str"]
         self.character.a_wis += self.bonusarray["wis"]
+        self.character.languages = table[self.name]["Languages"]
         self.initializeRace()
         
         
 class Human(Race):
     def initializeRace(self):
-        self.character.languages.append('Common')
+        pass
 
 class charmod():
     def __init__(self, name,permanent_bonus=True,timer=0):
@@ -86,4 +86,5 @@ class charmod():
 
 Mi = Person('Mio')
 
-print (Mi.classes, Mi.ki, Mi.a_str, Mi.a_cha, Mi.a_con, Mi.race.name, Mi.maxki)
+print ( Mi.a_str,Mi.a_con,Mi.a_dex, Mi.a_int, Mi.a_wis, Mi.a_cha,"\n",
+        Mi.race.name,Mi.classes,Mi.languages)

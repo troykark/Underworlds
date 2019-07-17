@@ -9,7 +9,8 @@
          "int": 1,
          "wis": 1,
          "cha": 1
-        }
+        },
+        "Languages" : ["Common", "Choice"]
     }
     ,
     "Dwarf":{
@@ -21,7 +22,7 @@
         "int": 0,
         "wis": 2,
         "cha": 0
-        }
-			
+        },
+    "Languages" : ["Common", "Dwarvish"]			
     }
 }
