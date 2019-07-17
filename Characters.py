@@ -11,7 +11,7 @@ class Person:
                  race='None', charmods=[]):
         self.name        = name
         self.hp          = hp
-        self.proficiency =proficiency
+        self.proficiency = proficiency
         self.a_str       = a_str
         self.a_dex       = a_dex
         self.a_con       = a_con
@@ -31,11 +31,30 @@ class Person:
             self.classes.append(Monk('Monk', self, 1))
         if self.race == 'None':
             self.race = Human('Human',self,'None',RACES)
+
     def updateChar(self):
+        # set attributers to base
+
+        #then apply bonuses
         for mod in self.charmods:
             mod.apply()
+            
+
+           
+
     def applyBonus(self, attribute, add):
-        setattr(self, attribute, ++add)
+        setattr(self, attribute, (getattr(self,attribute) + add))
+    def printChar(self):
+        print ( "*" * 24, "\n",
+            Mi.name,"\n",
+            "Level: ",Mi.level,"\n",
+            "Race: ",Mi.languages,"\n",
+            "Languages: ",Mi.languages,"\n",
+            "XP: ",Mi.xp,"\n",
+            "Str:",Mi.a_str,"Con:",Mi.a_con,"Dex:",Mi.a_dex,"\n",
+            "Int:", Mi.a_int,"Wis:", Mi.a_wis,"Cha:", Mi.a_cha,"\n",
+            "*" * 24)
+        
 
 class characterClass:
     def __init__(self, name, character, level, startingclass=True, 
@@ -89,11 +108,10 @@ class bonus():
     pass
 
 
-Mi = Person('Mio')
+Mi = Person('Mi')
 
-print ( Mi.a_str,Mi.a_con,Mi.a_dex, Mi.a_int, Mi.a_wis, Mi.a_cha,"\n",
-        Mi.race.name,Mi.classes,Mi.languages)
+
 print(Mi.xp)
 Mi.applyBonus( "xp", 100)
 
-print(Mi.xp)
+Mi.printChar()
