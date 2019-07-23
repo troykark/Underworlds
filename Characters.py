@@ -1,23 +1,31 @@
 import json
+import Races
+
 
 with open('races.json') as racejson:
     RACES = json.load(racejson)
 
 class Person:
     def __init__(self,name, hp=1, proficiency=0, speed=30,
-                 a_str=8, a_dex=8, a_con=8, a_int=8, a_wis=8, a_cha=8, 
+                 b_str=8, b_dex=8, b_con=8, b_int=8, b_wis=8, b_cha=8, 
                  classes = [], npc=True, skills=[], languages =["common"], 
                  multiclass = False, level=1, xp=0,
-                 race='None', charmods=[]):
+                 race='None', charmods=[], abilities = []):
         self.name        = name
         self.hp          = hp
         self.proficiency = proficiency
-        self.a_str       = a_str
-        self.a_dex       = a_dex
-        self.a_con       = a_con
-        self.a_int       = a_int
-        self.a_wis       = a_wis
-        self.a_cha       = a_cha
+        self.b_str       = b_str
+        self.b_dex       = b_dex
+        self.b_con       = b_con
+        self.b_int       = b_int
+        self.b_wis       = b_wis
+        self.b_cha       = b_cha
+        self.a_str       = self.b_str
+        self.a_dex       = self.b_dex
+        self.a_con       = self.b_con
+        self.a_int       = self.b_int
+        self.a_wis       = self.b_wis
+        self.a_cha       = self.b_cha
         self.classes     = classes
         self.npc         = npc 
         self.skills      = skills
@@ -27,10 +35,16 @@ class Person:
         self.xp          = xp
         self.charmods    = charmods
         self.race        = race
+        self.abilities   = abilities
+        
+
         if(len(classes)==0):
             self.classes.append(Monk('Monk', self, 1))
         if self.race == 'None':
-            self.race = Human('Human',self,'None',RACES)
+            self.race = Races.Human('Human',self,'None',RACES)
+        else:
+            #references the class from the Races module and looks it up and uses it
+            self.race = getattr(Races,self.race)(self.race,self,'None',RACES)
 
     def __str__(self):
         prntout = ''.join(map(str,[
@@ -39,8 +53,8 @@ class Person:
                         "Race: ",self.race.name,"\n",
                         "Languages: ",self.languages,"\n",
                         "XP: ",self.xp,"\n",
-                        "Str:",self.a_str," Con:",self.a_con," Dex:",self.a_dex,"\n",
-                        "Int:", self.a_int," Wis:", self.a_wis," Cha:", self.a_cha,"\n"])
+                        "Str:",self.b_str," Con:",self.b_con," Dex:",self.b_dex,"\n",
+                        "Int:", self.b_int," Wis:", self.b_wis," Cha:", self.b_cha,"\n"])
                         )        
         return prntout
 
@@ -52,6 +66,7 @@ class Person:
             mod.apply()
 
     def applyBonus(self, attribute, add):
+        #adds bonus to attribute, inteded for Bonuses
         setattr(self, attribute, (getattr(self,attribute) + add))
     
         
@@ -78,25 +93,7 @@ class Monk(characterClass):
         self.character.maxki = 0
         
         
-class Race():
-    def __init__(self, name, character, subrace, table):
-        self.name = name 
-        self.subrace = subrace
-        self.character = character
-        self.bonusarray = table[self.name]["AttributeBonuses"]
-        self.character.a_cha += self.bonusarray["cha"]
-        self.character.a_con += self.bonusarray["con"]
-        self.character.a_dex += self.bonusarray["dex"] 
-        self.character.a_int += self.bonusarray["int"]
-        self.character.a_str += self.bonusarray["str"]
-        self.character.a_wis += self.bonusarray["wis"]
-        self.character.languages = table[self.name]["Languages"]
-        self.initializeRace()
-        
-        
-class Human(Race):
-    def initializeRace(self):
-        pass
+
 
 class charmod():
     def __init__(self, name,permanent_bonus=True,timer=0):
@@ -108,11 +105,15 @@ class bonus():
     pass
 
 
-Mi = Person('Mi')
+def testCharacterCreation(): 
+    Mi = Person('Mi')
+    Mi.applyBonus( "xp", 100)
+    Mi.applyBonus( "b_str", -2)
+    print(Mi)
+    Xi = Person('Xi',race="Dwarf")
+    Xi.applyBonus( "xp", 100)
+    print(Xi)
 
 
-print(Mi.xp)
-Mi.applyBonus( "xp", 100)
-Mi.applyBonus( "a_str", -2)
 
-print(Mi)
+testCharacterCreation()
