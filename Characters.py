@@ -12,7 +12,8 @@ class Person:
                  npc=True, 
                  multiclass = False, level=1, xp=0,
                  race='None', randomStats = False,
-                 startingclass='None'):
+                 startingclass='None',
+                 combat_x = 0, combat_y = 0):
         self.name            = name
         self.hp              = hp
         self.proficiency     = proficiency
@@ -34,6 +35,7 @@ class Person:
         self.abilities       = []
         self.startingclass   = startingclass
         self.levelup         = False
+        self.combat_loc      = (combat_x, combat_y)
         if randomStats:
             self.b_str = dice.statarray()
             self.b_dex = dice.statarray()

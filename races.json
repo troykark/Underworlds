@@ -305,7 +305,7 @@
         "Name": "MountainDwarf",
         "subrace" : "Dwarf",
         "attributeBonuses": {
-            "str": 1,
+            "str": 2,
             "con": 2,
             "dex": 0,
             "int": 0,
