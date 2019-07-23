@@ -1,0 +1,40 @@
+{
+    "Fighter" : {
+        "Name" : "Fighter",
+        "HitDiceType" : 10,
+        "MartialProficiencies" : ["simple weapons", "martial weapons","All Armor"],
+        "Tools"                : [],
+        "SavingThrows"         :{
+            "Str" : true,
+            "Con" : true,
+            "Dex" : false,
+            "Int" : false,
+            "Wis" : false, 
+            "Cha" : false
+        },
+        "skilladd": 2,
+        "skillList": ["Acrobatics", "Animal Handling", 
+            "Athletics", "History", "Insight", 
+            "Intimidation","Perception", "Survival"
+        ]
+    },
+    "Monk" : {
+        "Name" : "Monk",
+        "HitDiceType" : 8,
+        "MartialProficiencies" : ["simple weapons", "martial weapons"],
+        "Tools"                : [],
+        "SavingThrows"         :{
+            "Str" : 1,
+            "Con" : 1,
+            "Dex" : 0,
+            "Int" : 0,
+            "Wis" : 0, 
+            "Cha" : 0
+        },
+        "skilladd": 2,
+        "skillList": ["Acrobatics", "Animal Handling", 
+            "Athletics", "History", "Insight", 
+            "Intimidation","Perception", "Survival"
+        ]
+    }
+}

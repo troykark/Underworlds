@@ -1,6 +1,6 @@
 class characterClass:
-    def __init__(self, name, character, level=1, isstartingclass=True, 
-                 initialLevel=True,):
+    def __init__(self, name, character, classtable, level=1, isstartingclass=True, 
+                 initialLevel=True,hitdicetype= 6):
         self.name = name 
         self.character = character
         self.level = level
@@ -11,6 +11,8 @@ class characterClass:
         self.activeAbilities = []
         self.passiveAbilities = []
         self.reactionAbilities = []
+        self.savingthrowprofs = classtable[self.name]["SavingThrows"]["Str"]
+        self.hitdicetype = classtable[self.name]["HitDiceType"] 
         if initialLevel == True:
             self.initializeClass()
             self.initialLevel = False
@@ -22,3 +24,7 @@ class Monk(characterClass):
     def initializeClass(self):
         self.character.ki    = 0
         self.character.maxki = 0
+
+class Fighter(characterClass):
+    def initializeClass(self):
+        pass

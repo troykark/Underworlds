@@ -6,6 +6,9 @@ import dice
 with open('races.json') as racejson:
     RACES = json.load(racejson)
 
+with open('classes.json') as classjson:
+    CLASSES = json.load(classjson)
+
 class Person:
     def __init__(self,name, hp=1, proficiency=0, speed=30,
                  b_str=8, b_dex=8, b_con=8, b_int=8, b_wis=8, b_cha=8,
@@ -51,8 +54,8 @@ class Person:
         self.a_cha       = self.b_cha
 
         if(self.startingclass != "None"):
-            self.classes.append(chrclasses.Monk('Monk', self, 1))
-            #self.classes.append(getattr(chrclasses,self.startingclass)(self.startingclass,self))
+            #self.classes.append(chrclasses.Fighter('Fighter', self, CLASSES))
+            self.classes.append(getattr(chrclasses,self.startingclass)(self.startingclass,self,CLASSES))
         if self.race == 'None':
             self.race = Races.Race('Human', self, RACES)
         else:
@@ -109,15 +112,15 @@ def testCharacterCreation():
     Xi.applyBonus( "xp", 100)
     print(Xi)
 
-    Gi = Person('Gi',race="HillDwarf",startingclass="Monk")
+    Gi = Person('Gi',race="HillDwarf",startingclass="Fighter",randomStats=True)
     Gi.applyBonus( "xp", 100)
     print(Gi)
 
-    Wi = Person('Wi',race="Elf",startingclass="Monk")
+    Wi = Person('Wi',race="Elf",startingclass="Monk",randomStats=True)
     Wi.applyBonus( "xp", 700)
     print(Wi)
 
-    Li = Person('Li',race="Tiefling",startingclass="Monk")
+    Li = Person('Li',race="Tiefling",startingclass="Monk",randomStats=True)
     Li.applyBonus( "xp", 700)
     print(Li)
 
