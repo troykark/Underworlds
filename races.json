@@ -414,9 +414,9 @@
         ],
         "size": "medium",
         "martialProficiencies": ["longsword", 
-            "shortsword", 
-            "shortbow", 
-            "longbow"],
+                                 "shortsword", 
+                                 "shortbow", 
+                                 "longbow"],
         "subRaces": [],
         "srd":false,
         "playable":true
@@ -454,7 +454,9 @@
             "Perception"
         ],
         "size": "medium",
-        "martialProficiencies": ["rapier", "shortsword",  "hand crossbow"],
+        "martialProficiencies": ["rapier", 
+                                 "shortsword",  
+                                 "hand crossbow"],
         "subRaces": [],
         "srd":false,
         "playable":true
