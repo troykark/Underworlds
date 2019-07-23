@@ -32,28 +32,28 @@ class Person:
         if self.race == 'None':
             self.race = Human('Human',self,'None',RACES)
 
+    def __str__(self):
+        prntout = ''.join(map(str,[
+                        self.name,"\n",
+                        "Level: ",self.level,"\n",
+                        "Race: ",self.race.name,"\n",
+                        "Languages: ",self.languages,"\n",
+                        "XP: ",self.xp,"\n",
+                        "Str:",self.a_str," Con:",self.a_con," Dex:",self.a_dex,"\n",
+                        "Int:", self.a_int," Wis:", self.a_wis," Cha:", self.a_cha,"\n"])
+                        )        
+        return prntout
+
     def updateChar(self):
         # set attributers to base
 
         #then apply bonuses
         for mod in self.charmods:
             mod.apply()
-            
-
-           
 
     def applyBonus(self, attribute, add):
         setattr(self, attribute, (getattr(self,attribute) + add))
-    def printChar(self):
-        print ( "*" * 24, "\n",
-            Mi.name,"\n",
-            "Level: ",Mi.level,"\n",
-            "Race: ",Mi.languages,"\n",
-            "Languages: ",Mi.languages,"\n",
-            "XP: ",Mi.xp,"\n",
-            "Str:",Mi.a_str,"Con:",Mi.a_con,"Dex:",Mi.a_dex,"\n",
-            "Int:", Mi.a_int,"Wis:", Mi.a_wis,"Cha:", Mi.a_cha,"\n",
-            "*" * 24)
+    
         
 
 class characterClass:
@@ -113,5 +113,6 @@ Mi = Person('Mi')
 
 print(Mi.xp)
 Mi.applyBonus( "xp", 100)
+Mi.applyBonus( "a_str", -2)
 
-Mi.printChar()
+print(Mi)
