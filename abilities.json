@@ -1,0 +1,16 @@
+{
+"dwarvent_resilience_thrw":{
+    "Name"            : "Dwarvent Resilience - Saving Throws",
+    "Passive"         : true,
+    "Type"            : "SavingThrow_Bonus",
+    "SavingThrowType" : "Poison",
+    "BonusType"       : "Advantage"
+    },
+"dwarvent_resilience_res":{
+        "Name"        : "Dwarvent Resilience - Resistance",
+        "Passive"     : true,
+        "Type"        : "Resistance",
+        "DamageTypes" : ["Poison"]
+        }
+
+}
