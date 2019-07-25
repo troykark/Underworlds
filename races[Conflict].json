@@ -456,7 +456,7 @@
         "size": "medium",
         "martialProficiencies": ["rapier", 
                                  "shortsword",  
-                                 "handcrossbow"],
+                                 "hand crossbow"],
         "subRaces": [],
         "srd":false,
         "playable":true
