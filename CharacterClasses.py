@@ -1,4 +1,4 @@
-class characterClass:
+class characterClass(object):
     def __init__(self, name, character, classtable, level=1, isstartingclass=True, 
                  initialLevel=True,hitdicetype= 6):
         self.name = name 
@@ -26,5 +26,14 @@ class Monk(characterClass):
         self.character.maxki = 0
 
 class Fighter(characterClass):
+    def __init__(self, name, character, classtable, level=1, isstartingclass=True, 
+                 initialLevel=True,hitdicetype= 6):
+        super().__init__(name, character, classtable, level, isstartingclass, 
+                 initialLevel,hitdicetype)
+        
+
     def initializeClass(self):
-        pass
+        self.character.secondwind = 1
+        self.character.fightingstyle = None 
+        self.character.choices.append(self.name + "fightingstyle")
+    

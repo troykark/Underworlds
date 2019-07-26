@@ -1,12 +1,19 @@
 
 class Ability: 
-    pass
+    def __init__(self):
+        pass
 
 class Bonus(Ability):
-    pass
+    def __init__(self):
+        pass
+
 
 class SavingThrow(Bonus):
-    pass
+    def __init__(self):
+        pass
+
 
 class Resistance(Ability): 
-    pass
+    def __init__(self):
+        pass
+

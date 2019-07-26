@@ -9,7 +9,7 @@ with open('races.json') as racejson:
 with open('classes.json') as classjson:
     CLASSES = json.load(classjson)
 
-class Person:
+class Person(object):
     def __init__(self,name, hp=1, proficiency=0, speed=30,
                  b_str=8, b_dex=8, b_con=8, b_int=8, b_wis=8, b_cha=8,
                  npc=True, 
@@ -39,6 +39,7 @@ class Person:
         self.startingclass   = startingclass
         self.levelup         = False
         self.combat_loc      = (combat_x, combat_y)
+        self.choices         = []
         if randomStats:
             self.b_str = dice.statarray()
             self.b_dex = dice.statarray()
@@ -75,7 +76,8 @@ class Person:
                         "Languages: ",self.languages,"\n",
                         "XP: ",self.xp,"\n",
                         "Str:",self.b_str," Con:",self.b_con," Dex:",self.b_dex,"\n",
-                        "Int:", self.b_int," Wis:", self.b_wis," Cha:", self.b_cha,"\n"])
+                        "Int:", self.b_int," Wis:", self.b_wis," Cha:", self.b_cha,"\n",
+                        "Abilities: ", self.abilities,"\n"])
                         )        
         return prntout
 
@@ -112,9 +114,7 @@ def testCharacterCreation():
     Xi.applyBonus( "xp", 100)
     print(Xi)
 
-    Gi = Person('Gi',race="HillDwarf",startingclass="Fighter",randomStats=True)
-    Gi.applyBonus( "xp", 100)
-    print(Gi)
+   
 
     Wi = Person('Wi',race="Elf",startingclass="Monk",randomStats=True)
     Wi.applyBonus( "xp", 700)
@@ -123,5 +123,12 @@ def testCharacterCreation():
     Li = Person('Li',race="Tiefling",startingclass="Monk",randomStats=True)
     Li.applyBonus( "xp", 700)
     print(Li)
+
+    Gi = Person('Gi',race="HillDwarf",startingclass="Fighter",randomStats=True)
+    Gi.applyBonus( "xp", 100)
+    print(Gi)
+    print("Abilities: ", Gi.classes[0].abilities)
+    print("SecondWind: ", Gi.secondwind)
+   
 
 testCharacterCreation()
