@@ -65,13 +65,82 @@
                 "attacks" : 0,
                 "ability_score_imp" : 1,
                 "subclass" : 0 
+            },
+            "9" : {
+                "abilities" : ["indomitable"],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "10" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 1 
+            },
+            "11" : {
+                "abilities" : [],
+                "attacks" : 1,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "12" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "13" : {
+                "abilities" : ["indomitable2"],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "14" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "15" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 1
+            },
+            "16" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "17" : {
+                "abilities" : ["actionsurge2", "indomitable3"],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "18" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 1 
+            },
+            "19" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "20" : {
+                "abilities" : [],
+                "attacks" : 1,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
             }
 
 
         }
-
-
-        ]
     },
     "Monk" : {
         "Name" : "Monk",

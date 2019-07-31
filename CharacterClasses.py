@@ -11,6 +11,7 @@ class characterClass(object):
         self.activeAbilities = []
         self.passiveAbilities = []
         self.reactionAbilities = []
+        self.classTable = classtable[self.name]
         self.savingthrowprofs = classtable[self.name]["SavingThrows"]["Str"]
         self.hitdicetype = classtable[self.name]["HitDiceType"] 
         if initialLevel == True:
@@ -30,10 +31,15 @@ class Fighter(characterClass):
                  initialLevel=True,hitdicetype= 6):
         super().__init__(name, character, classtable, level, isstartingclass, 
                  initialLevel,hitdicetype)
-        
-
-    def initializeClass(self):
         self.character.secondwind = 1
         self.character.fightingstyle = None 
-        self.character.choices.append(self.name + "fightingstyle")
-    
+        self.character.indomitables = 0
+
+    def initializeClass(self):
+        self.updateClass()
+
+    def updateClass(self):
+        self.abilities = []
+        for level in range(self.level):
+            self.abilities.extend(self.classTable["levels"][str(level + 1)]["abilities"])
+
