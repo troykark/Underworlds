@@ -20,123 +20,204 @@
         "levels" : { 
             "1" : {
                 "abilities" : ["fighter_fightingStyle", "secondwind"],
-                "attacks" : 0,
+                
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0, 
+                "features" : {"attacks" : 1,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 0
+                }
             },
             "2" : {
                 "abilities" : ["actionsurge"],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 1,
+                    "secondwind_max" : 1,
+                    "indomitable_max" : 0,
+                    "actionsurge_max" : 1
+                    }      
             },
             "3" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 1 
+                "subclass" : 1,
+                "features" : {"attacks" : 1,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "4" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 1,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "5" : {
                 "abilities" : [],
-                "attacks" : 1,
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "6" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "7" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 1 
+                "subclass" : 1,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "8" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 0,
+                              "actionsurge_max" : 1
+                } 
             },
             "9" : {
                 "abilities" : ["indomitable"],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 1,
+                              "actionsurge_max" : 1
+                } 
             },
             "10" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 1 
+                "subclass" : 1,
+                "features" : {"attacks" : 2,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 1,
+                              "actionsurge_max" : 1
+                } 
             },
             "11" : {
                 "abilities" : [],
-                "attacks" : 1,
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 1,
+                              "actionsurge_max" : 1
+                } 
             },
             "12" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 1,
+                              "actionsurge_max" : 1
+                } 
             },
             "13" : {
-                "abilities" : ["indomitable2"],
-                "attacks" : 0,
+                "abilities" : [],
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 2,
+                              "actionsurge_max" : 1
+                } 
             },
             "14" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 2,
+                              "actionsurge_max" : 1
+                } 
             },
             "15" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 1
+                "subclass" : 1,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 2,
+                              "actionsurge_max" : 1
+                }
             },
             "16" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 2,
+                              "actionsurge_max" : 1
+                } 
             },
             "17" : {
-                "abilities" : ["actionsurge2", "indomitable3"],
-                "attacks" : 0,
+                "abilities" : [],
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 3,
+                              "actionsurge_max" : 2
+                } 
             },
             "18" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 0,
-                "subclass" : 1 
+                "subclass" : 1,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 3,
+                              "actionsurge_max" : 2
+                } 
             },
             "19" : {
                 "abilities" : [],
-                "attacks" : 0,
                 "ability_score_imp" : 1,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 3,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 3,
+                              "actionsurge_max" : 2
+                } 
             },
             "20" : {
                 "abilities" : [],
-                "attacks" : 1,
                 "ability_score_imp" : 0,
-                "subclass" : 0 
+                "subclass" : 0,
+                "features" : {"attacks" : 4,
+                              "secondwind_max" : 1,
+                              "indomitable_max" : 3,
+                              "actionsurge_max" : 2
+                } 
             }
 
 

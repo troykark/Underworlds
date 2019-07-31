@@ -11,6 +11,7 @@ class characterClass(object):
         self.activeAbilities = []
         self.passiveAbilities = []
         self.reactionAbilities = []
+        self.attacks = 1
         self.classTable = classtable[self.name]
         self.savingthrowprofs = classtable[self.name]["SavingThrows"]["Str"]
         self.hitdicetype = classtable[self.name]["HitDiceType"] 
@@ -33,8 +34,9 @@ class Fighter(characterClass):
                  initialLevel,hitdicetype)
         self.character.secondwind = 1
         self.character.fightingstyle = None 
-        self.character.indomitables = 0
-
+        self.character.indomitable = 0
+        
+        
     def initializeClass(self):
         self.updateClass()
 
@@ -42,4 +44,6 @@ class Fighter(characterClass):
         self.abilities = []
         for level in range(self.level):
             self.abilities.extend(self.classTable["levels"][str(level + 1)]["abilities"])
-
+        self.attacks =  self.classTable["levels"][str(self.level)]["features"]["attacks"]
+    def getClassHp(self):
+        return self.hitdicetype * self.level 

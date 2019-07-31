@@ -129,12 +129,13 @@ def testCharacterCreation():
     print(Gi)
     print("Abilities: ", Gi.classes[0].abilities)
     print("SecondWind: ", Gi.secondwind)
-    print("SecondWind: ", Gi.secondwind)
+    print("Attacks: ", Gi.classes[0].attacks, "\n")
     Gi.classes[0].level = 20
     Gi.classes[0].updateClass()
     print(Gi)
     print("Abilities: ", Gi.classes[0].abilities)
     print("SecondWind: ", Gi.secondwind)
+    print("Attacks: ", Gi.classes[0].attacks, "\n")
 
    
 
