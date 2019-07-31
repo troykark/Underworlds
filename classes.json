@@ -16,6 +16,61 @@
         "skillList": ["Acrobatics", "Animal Handling", 
             "Athletics", "History", "Insight", 
             "Intimidation","Perception", "Survival"
+        ],
+        "levels" : { 
+            "1" : {
+                "abilities" : ["fighter_fightingStyle", "secondwind"],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "2" : {
+                "abilities" : ["actionsurge"],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "3" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 1 
+            },
+            "4" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "5" : {
+                "abilities" : [],
+                "attacks" : 1,
+                "ability_score_imp" : 0,
+                "subclass" : 0 
+            },
+            "6" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            },
+            "7" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 0,
+                "subclass" : 1 
+            },
+            "8" : {
+                "abilities" : [],
+                "attacks" : 0,
+                "ability_score_imp" : 1,
+                "subclass" : 0 
+            }
+
+
+        }
+
+
         ]
     },
     "Monk" : {
