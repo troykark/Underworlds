@@ -17,6 +17,8 @@
             "Athletics", "History", "Insight", 
             "Intimidation","Perception", "Survival"
         ],
+        "classtrackables" : ["secondwind","secondwind_max","indomitable","indomitable_max","actionsurge","actionsurge_max"],
+        "tail": true,
         "levels" : { 
             "1" : {
                 "abilities" : ["fighter_fightingStyle", "secondwind"],
